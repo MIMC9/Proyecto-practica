@@ -21,8 +21,8 @@ Auth::routes();
 
 Route::resource('libros', App\Http\Controllers\LibroController::class)->middleware('auth');
 
-Route::resource('categorias', App\Http\Controllers\CategoriaController::class)->middleware('auth');
+Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
 
-Route::resource('editoriales', App\Http\Controllers\EditorialeController::class)->middleware('auth');
+Route::resource('editoriales', App\Http\Controllers\EditorialeController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
